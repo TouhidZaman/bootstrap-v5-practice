@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="css/bootstrap-5.1.1-css/bootstrap.min.css">
+    <style>
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>Bootstrap Grid Layout</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Same grid layout for All screen</h1>
+        <div class="row">
+            <div class="col-4">
+                <!-- If there is only col-*, it will apply for all screen -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam fugiat laborum illum sunt unde nulla omnis enim nostrum mollitia fugit.</p>
+            </div>
+            <div class="col-4">
+                <p>Numquam quae natus voluptatum expedita aliquid reprehenderit veniam rem vel, atque nulla quisquam ex corrupti, accusantium consequatur, itaque suscipit laboriosam?</p>
+            </div>
+            <div class="col-4">
+                <p>Accusamus tempora consequatur nulla quisquam. Voluptates cumque sequi mollitia sit temporibus corrupti expedita, magni optio quasi officia voluptatibus aut quidem?</p>
+            </div>
+        </div>
+        <h1 class="text-center">Diffrent grid layout for multiscreen</h1>
+        <div class="row">
+            <div class="col-md-6 col-xl-3">
+                <!-- 
+                    note: there is no col-* so it will take full with in extra small screen 
+                    note: there is no col-sm-* so it will take full with in small screen 
+                    note: there is col-md-6, so it will split full width into two 6,6 column in medium screen 
+                    note: there is no col-lg-* so it will apply it's previous  col-md-*'s role'
+                    note: there is col-xl-3, so it will split full width into four 3,3,3,3 column in extra large screen 
+                    note: for all other screen sizes after xl it will apply previous role that menas col-xl-*'s role  
+                -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam fugiat laborum illum sunt unde nulla omnis enim nostrum mollitia fugit.</p>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <p>Numquam quae natus voluptatum expedita aliquid reprehenderit veniam rem vel, atque nulla quisquam ex corrupti, accusantium consequatur, itaque suscipit laboriosam?</p>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <p>Accusamus tempora consequatur nulla quisquam. Voluptates cumque sequi mollitia sit temporibus corrupti expedita, magni optio quasi officia voluptatibus aut quidem?</p>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <p>Accusamus tempora consequatur nulla quisquam. Voluptates cumque sequi mollitia sit temporibus corrupti expedita, magni optio quasi officia voluptatibus aut quidem?</p>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap-5.1.1-js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<!-- 
+    Important note:
+    Extra small (xs)
+    Small (sm)
+    Medium (md)
+    Large (lg)
+    Extra large (xl)
+    Extra extra large (xxl)
+
+    (xs < 576px) -	(sm ≥ 576px) - (md ≥ 768px) -	(lg ≥ 992px) -	(xl ≥ 1200px) - (xxl ≥ 1400px) 					
+    .col-(auto) .col-sm-540px	.col-md-720px	.col-lg-960px	.col-xl-1140px	.col-xxl-1320px 
+-->
