@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="css/bootstrap-5.1.1-css/bootstrap.min.css">
+    <style>
+        h1 {
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+        .align-height .row{
+          height: 100px;
+          background-color: brown;
+          color: white;
+          margin-bottom: 20px;
+        }
+        
+    </style>
+    <title>Bootstrap Columns</title>
+</head>
+<body>
+    <div class="container">
+      <h1 class="text-center">Column Alignment - Horizontal</h1>
+        <div class="container align-height">
+          <div class="row justify-content-start">
+            <div class="col-4 bg-primary">
+              One of Two columns
+            </div>
+            <div class="col-4 bg-secondary">
+              One of Two columns
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-4 bg-primary">
+              One of Two columns
+            </div>
+            <div class="col-4 bg-secondary">
+              One of Two columns
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="col-4 bg-primary">
+              One of Two columns
+            </div>
+            <div class="col-4 bg-secondary">
+              One of Two columns
+            </div>
+          </div>
+        </div>
+        <!-- End of Horizontal alignment -->
+
+        <!-- Vertical Alignment  -->
+        <h1 class="text-center">Column Alignment - Vertical</h1>
+        <div class="container align-height">
+          <div class="row align-items-start">
+            <div class="col bg-primary">
+              One of three columns
+            </div>
+            <div class="col bg-secondary">
+              One of three columns
+            </div>
+            <div class="col bg-warning">
+              One of three columns
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col bg-primary">
+              One of three columns
+            </div>
+            <div class="col bg-secondary">
+              One of three columns
+            </div>
+            <div class="col bg-warning">
+              One of three columns
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col bg-primary">
+              One of three columns
+            </div>
+            <div class="col bg-secondary">
+              One of three columns
+            </div>
+            <div class="col bg-warning">
+              One of three columns
+            </div>
+          </div>
+          <!-- self align  -->
+          <h3>Column Alignment - Vertical-Self</h3>
+          <div class="row">
+            <div class="col bg-primary align-self-start">
+              One of three columns
+            </div>
+            <div class="col bg-secondary align-self-center">
+              One of three columns
+            </div>
+            <div class="col bg-warning align-self-end">
+              One of three columns
+            </div>
+          </div>
+        </div>
+
+        
+        <h1 class="text-center">Bootstrap Column breaks</h1>
+        <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+              <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+          
+              <!-- Force next columns to break to new line -->
+              <div class="w-100"></div>
+          
+              <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+              <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            </div>
+          </div>
+
+          <h1 class="text-center">Bootstrap Force Column breaks at md to up</h1>
+          <div class="container">
+            <div class="row">
+              <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+              <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+          
+              <!-- Force next columns to break to new line at md breakpoint and up -->
+              <div class="w-100 d-none d-md-block"></div>
+          
+              <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+              <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+            </div>
+          </div>
+
+        <h1 class="text-center">Order classes</h1>
+        <p class="text-white bg-success text-center p-2">
+          Use .order- classes for controlling the visual order of your content. These classes are responsive, so you can set the order by breakpoint (e.g., .order-1.order-md-2). Includes support for 1 through 5 across all six grid tiers.
+        </p>
+        <div class="container">
+          <div class="row">
+            <div class="col order-3">col-1 order-3</div>
+            <div class="col order-4">col-2 order-4</div>
+            <div class="col order-1">col-3 order-1</div>
+            <div class="col order-5">col-4 order-5</div>
+            <div class="col order-2">col-5 order-2</div>
+          </div>
+        </div>
+
+      <h1 class="text-center">Offsetting columns</h1>
+      <p class="text-center bg-success text-white p-2">
+        Move columns to the right using .offset-md-* classes. These classes increase the left margin of a column by * columns. For example, .offset-md-4 moves .col-md-4 over four columns.<span class="text-warning"> Note: to reset offset use offset-0 / offset-*-0 </span>
+      </p>
+      <div class="container align-height overflow-hidden">
+        <div class="row">
+          <div class="col-md-4 bg-primary">.col-md-4</div>
+          <div class="col-md-4 offset-md-4 bg-secondary">.col-md-4 .offset-md-4</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 offset-md-3 bg-primary">.col-md-3 .offset-md-3</div>
+          <div class="col-md-3 offset-md-3 bg-secondary">.col-md-3 .offset-md-3</div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 offset-md-3 bg-primary">.col-md-6 .offset-md-3</div>
+        </div>
+      </div>
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap-5.1.1-js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
